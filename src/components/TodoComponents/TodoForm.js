@@ -9,8 +9,7 @@ class TodoForm extends Component {
     }
 
     handleDelete = e => {
-        e.stopPropagation();
-        e.nativeEvent.stopImmediatePropagation();
+        e.preventDefault();
         
         this.props.deleteItems();
     }
