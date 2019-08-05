@@ -14,9 +14,15 @@ class TodoForm extends Component {
         });
     };
 
+    submitItem = e => {
+        e.preventDefault();
+        this.props.addItem(this.state.item);
+        // console.log(this.state.item);
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.submitItem}>
                 <input 
                     type='text'
                     value={this.state.item}

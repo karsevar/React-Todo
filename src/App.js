@@ -47,12 +47,31 @@ class App extends React.Component {
       todoData: [...mockData]
     }
   }
+
+  addItem = itemName => {
+    const newItem = {
+      task: itemName,
+      id: Date.now(),
+      completed: false
+    };
+
+    this.setState({
+      todoData: [...this.state.todoData, newItem]
+    });
+
+    console.log(this.state.todoData);
+  };
+
   render() {
     return (
       <div className='app'>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todoData={this.state.todoData} />
-        <TodoForm />
+        <TodoList 
+          todoData={this.state.todoData} 
+        />
+        <TodoForm 
+          addItem={this.addItem}
+        />
       </div>
     );
   }
