@@ -77,7 +77,13 @@ class App extends React.Component {
         }
       })
     })
-  }
+  };
+
+  deleteItems = () => {
+    this.setState({
+      todoData: this.state.todoData.filter(item => !item.completed)
+    })
+  };
 
   render() {
     return (
@@ -89,6 +95,7 @@ class App extends React.Component {
         />
         <TodoForm 
           addItem={this.addItem}
+          deleteItems={this.deleteItems} 
         />
       </div>
     );
