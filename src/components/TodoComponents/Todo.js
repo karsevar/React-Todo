@@ -9,7 +9,6 @@ const Todo = props => {
             style={props.item.completed ? {textDecoration: 'line-through'} : {textDecoration: 'none'}}
             onClick={() => props.toggleItem(props.item.id)}
         >
-            {console.log(props.item.completed)}
             <p>{props.item.task}</p>
         </div>
     )

@@ -62,12 +62,17 @@ class App extends React.Component {
     console.log(this.state.todoData);
   };
 
+  toggleItem = id => {
+    console.log(id);
+  }
+
   render() {
     return (
       <div className='app'>
         <h2>Welcome to your Todo App!</h2>
         <TodoList 
           todoData={this.state.todoData} 
+          toggleItem={this.toggleItem} 
         />
         <TodoForm 
           addItem={this.addItem}
