@@ -6,11 +6,13 @@ import React from 'react';
 import Todo from './Todo';
 
 const TodoList = props => {
-    <div className='todo-list'>
-        {props.todoData.map(item => {
-            <Todo key={item.key} item={item} />
-        })}
-    </div>
+    return (
+        <div className='todo-list'>
+            {props.todoData.map(item => {
+               return <Todo key={item.key} item={item} />
+            })}
+        </div>
+    )
 };
 
 export default TodoList;
