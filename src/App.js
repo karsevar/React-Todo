@@ -1,6 +1,8 @@
 import React from 'react';
 
 import TodoList from './components/TodoComponents/TodoList';
+import TodoForm from './components/TodoComponents/TodoForm';
+
 
 const mockData = [
   'Write the app component component class',
@@ -26,6 +28,7 @@ class App extends React.Component {
       <div className='app'>
         <h2>Welcome to your Todo App!</h2>
         <TodoList todoData={this.state.todoData} />
+        <TodoForm />
       </div>
     );
   }
