@@ -8,7 +8,7 @@ const mockData = [
   {
     task: 'Write the app component component class',
     id: 1,
-    completed: false
+    completed: true
   },
   {
     task: 'Call the class component React component (React.Component)',

@@ -1,9 +1,16 @@
 import React from 'react';
+import './Todo.css';
 
 const Todo = props => {
     return (
-        <div className='todo-item'>
-            <p>{props.item}</p>
+        <div 
+            // Can't get the css module to work with this project. Had to use inline styles.
+            // className={`item${props.item.completed ? ' completed' : ''}`}
+            style={props.item.completed ? {textDecoration: 'line-through'} : {textDecoration: 'none'}}
+            onClick={() => props.toggleItem(props.item.id)}
+        >
+            {console.log(props.item.completed)}
+            <p>{props.item.task}</p>
         </div>
     )
 }
